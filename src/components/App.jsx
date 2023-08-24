@@ -1,3 +1,5 @@
+import { Section } from "./SectionFeedback/SectionFeedback";
+
 export const App = () => {
   return (
     <div
@@ -9,8 +11,8 @@ export const App = () => {
         fontSize: 40,
         color: '#010101'
       }}
-    >
-      React homework template
+    > 
+      <Section title=""></Section>
     </div>
   );
 };
