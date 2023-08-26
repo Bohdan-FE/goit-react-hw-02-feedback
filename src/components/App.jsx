@@ -10,7 +10,8 @@ export class App extends Component {
 
   onLeaveFeedback = e => {
     this.setState(prevState => ({
-      [e.target.getAttribute('option')]: prevState.good + 1,
+      [e.target.getAttribute('option')]:
+        prevState[e.target.getAttribute('option')] + 1,
     }));
   };
 
