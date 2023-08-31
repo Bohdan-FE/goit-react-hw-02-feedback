@@ -29,20 +29,18 @@ export class App extends Component {
 
   render() {
     const { good, neutral, bad } = this.state;
-    const title1 = 'Please leave feedback';
-    const title2 = 'Statistics';
     return (
       <>
-        {title1 && <Section
-          title={title1}
-        ></Section>}
+        <Section
+          title='Please leave feedback'
+        ></Section>
         <FeedbackOptions
           options={Object.keys(this.state)}
           onLeaveFeedback={this.onLeaveFeedback}
         ></FeedbackOptions>
-        {title2 && <Section
-          title={title2}
-        ></Section>}
+        <Section
+          title='Statistics'
+        ></Section>
         {this.countTotalFeedback() > 0 ? (
         <Statistics
           good={good}
